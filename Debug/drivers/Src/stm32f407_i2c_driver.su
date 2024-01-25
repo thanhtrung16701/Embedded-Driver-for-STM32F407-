@@ -1,0 +1,5 @@
+../drivers/Src/stm32f407_i2c_driver.c:12:6:I2C_PeriClockCtrl	16	static
+../drivers/Src/stm32f407_i2c_driver.c:28:6:I2C_Init	16	static
+../drivers/Src/stm32f407_i2c_driver.c:33:6:I2C_DeInit	16	static
+../drivers/Src/stm32f407_i2c_driver.c:50:6:I2C_IRQInterruptConfig	16	static
+../drivers/Src/stm32f407_i2c_driver.c:72:6:I2C_IRQPriorityConfig	16	static
