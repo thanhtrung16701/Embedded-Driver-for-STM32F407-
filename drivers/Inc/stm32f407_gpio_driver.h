@@ -32,7 +32,7 @@ typedef struct
 	GPIO_PinConfig_t 	GPIO_PinCfg; 			// hold configuration setting
 }GPIO_Handle_t;
 
-
+//
 
 /*
  * @GPIO PIN NUM
