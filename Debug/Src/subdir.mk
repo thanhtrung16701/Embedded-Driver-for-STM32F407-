@@ -5,17 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/008_SPI_CMD_Handle.c \
+../Src/012_I2C_Master_RX_Test_IT.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c 
 
 OBJS += \
-./Src/008_SPI_CMD_Handle.o \
+./Src/012_I2C_Master_RX_Test_IT.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o 
 
 C_DEPS += \
-./Src/008_SPI_CMD_Handle.d \
+./Src/012_I2C_Master_RX_Test_IT.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d 
 
@@ -27,7 +27,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/008_SPI_CMD_Handle.cyclo ./Src/008_SPI_CMD_Handle.d ./Src/008_SPI_CMD_Handle.o ./Src/008_SPI_CMD_Handle.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/012_I2C_Master_RX_Test_IT.cyclo ./Src/012_I2C_Master_RX_Test_IT.d ./Src/012_I2C_Master_RX_Test_IT.o ./Src/012_I2C_Master_RX_Test_IT.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 
 .PHONY: clean-Src
 

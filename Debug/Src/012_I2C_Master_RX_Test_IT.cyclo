@@ -1,0 +1,8 @@
+../Src/012_I2C_Master_RX_Test_IT.c:25:6:delay	2
+../Src/012_I2C_Master_RX_Test_IT.c:30:6:I2C_GPIOInits	1
+../Src/012_I2C_Master_RX_Test_IT.c:49:6:I2C1_Inits	1
+../Src/012_I2C_Master_RX_Test_IT.c:60:6:GPIO_ButtonInit	1
+../Src/012_I2C_Master_RX_Test_IT.c:73:5:main	7
+../Src/012_I2C_Master_RX_Test_IT.c:125:6:I2C_ER_IRQHandler	1
+../Src/012_I2C_Master_RX_Test_IT.c:130:6:I2C_EV_IRQHandler	1
+../Src/012_I2C_Master_RX_Test_IT.c:135:6:I2C_ApplicationEventCallback	4

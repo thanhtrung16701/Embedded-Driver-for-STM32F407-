@@ -144,7 +144,7 @@ void SPI_SendData(SPI_RegDef_t *pSPIx,uint8_t *pTXBuffer, uint32_t len)
 	while(len > 0)
 	{
 		// 1. Wait until TXE is set
-//		while(! (pSPIx->DR & (1 << 1) )  ); // (pSPIx->DR & (1 << 1) != (1 << 1);
+		while(!		(pSPIx->DR & (1 << 1) )  ); // (pSPIx->DR & (1 << 1) != (1 << 1);
 
 		// while = 1 true, = 0 false TX is set and come out of the loop
 		while(SPI_GetFlagStatus(pSPIx, SPI_TXE_FLAG) == FLAG_RESET);
@@ -222,7 +222,7 @@ void SPI_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnOrDi)
 	}
 }
 
-void SPI_IRQPriorityConfig(uint8_t IRQNumber, uint8_t IRQPriority)
+void SPI_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority)
 {
 	// find out ipr reg -> 32 bit IN a IPR, 4 section
 	uint8_t iprx = IRQNumber / 4;

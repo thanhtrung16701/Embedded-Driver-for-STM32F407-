@@ -1,4 +1,4 @@
-"./Src/008_SPI_CMD_Handle.o"
+"./Src/012_I2C_Master_RX_Test_IT.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
 "./Startup/startup_stm32f407vgtx.o"

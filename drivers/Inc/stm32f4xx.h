@@ -97,6 +97,34 @@
 #define USART1_BASE_ADDR 		(APB2PER_BASE_ADDR + 0x1000)
 #define USART6_BASE_ADDR 		(APB2PER_BASE_ADDR + 0x1400)
 
+/*
+ * ******************* Define peripheral ****************************
+ */
+
+#define GPIOA 		((GPIO_RegDef_t*)GPIOA_BASE_ADDR)
+#define GPIOB 		((GPIO_RegDef_t*)GPIOB_BASE_ADDR)
+#define GPIOC 		((GPIO_RegDef_t*)GPIOC_BASE_ADDR)
+#define GPIOD 		((GPIO_RegDef_t*)GPIOD_BASE_ADDR)
+#define GPIOE 		((GPIO_RegDef_t*)GPIOE_BASE_ADDR)
+#define GPIOF 		((GPIO_RegDef_t*)GPIOF_BASE_ADDR)
+#define GPIOG 		((GPIO_RegDef_t*)GPIOG_BASE_ADDR)
+#define GPIOH 		((GPIO_RegDef_t*)GPIOH_BASE_ADDR)
+#define GPIOI 		((GPIO_RegDef_t*)GPIOI_BASE_ADDR)
+
+#define SPI1		((SPI_RegDef_t*)SPI1_BASE_ADDR)
+#define SPI2		((SPI_RegDef_t*)SPI2_BASE_ADDR)
+#define SPI3		((SPI_RegDef_t*)SPI3_BASE_ADDR)
+#define SPI4		((SPI_RegDef_t*)SPI4_BASE_ADDR)
+
+#define I2C1		((I2C_RegDef_t*)I2C1_BASE_ADDR)
+#define I2C2		((I2C_RegDef_t*)I2C2_BASE_ADDR)
+#define I2C3		((I2C_RegDef_t*)I2C3_BASE_ADDR)
+
+#define RCC 		((RCC_RegDef_t*)RCC_BASE_ADDR)
+
+#define EXTI		((EXTI_RegDef_t*)EXTI_BASE_ADDR)
+
+#define SYSCFG		((SYSCFG_RegDef_t*)SYSCFG_BASE_ADDR)
 
 /*
  * ********************* Peripheral Register Definition**************
@@ -229,34 +257,6 @@ typedef struct
 
 }I2C_RegDef_t;
 
-/*
- * ******************* Define peripheral ****************************
- */
-
-#define GPIOA 		((GPIO_RegDef_t*)GPIOA_BASE_ADDR)
-#define GPIOB 		((GPIO_RegDef_t*)GPIOB_BASE_ADDR)
-#define GPIOC 		((GPIO_RegDef_t*)GPIOC_BASE_ADDR)
-#define GPIOD 		((GPIO_RegDef_t*)GPIOD_BASE_ADDR)
-#define GPIOE 		((GPIO_RegDef_t*)GPIOE_BASE_ADDR)
-#define GPIOF 		((GPIO_RegDef_t*)GPIOF_BASE_ADDR)
-#define GPIOG 		((GPIO_RegDef_t*)GPIOG_BASE_ADDR)
-#define GPIOH 		((GPIO_RegDef_t*)GPIOH_BASE_ADDR)
-#define GPIOI 		((GPIO_RegDef_t*)GPIOI_BASE_ADDR)
-
-#define SPI1		((SPI_RegDef_t*)SPI1_BASE_ADDR)
-#define SPI2		((SPI_RegDef_t*)SPI2_BASE_ADDR)
-#define SPI3		((SPI_RegDef_t*)SPI3_BASE_ADDR)
-#define SPI4		((SPI_RegDef_t*)SPI4_BASE_ADDR)
-
-#define I2C1		((I2C_RegDef_t*)I2C1_BASE_ADDR)
-#define I2C2		((I2C_RegDef_t*)I2C2_BASE_ADDR)
-#define I2C3		((I2C_RegDef_t*)I2C3_BASE_ADDR)
-
-#define RCC 		((RCC_RegDef_t*)RCC_BASE_ADDR)
-
-#define EXTI		((EXTI_RegDef_t*)EXTI_BASE_ADDR)
-
-#define SYSCFG		((SYSCFG_RegDef_t*)SYSCFG_BASE_ADDR)
 
 
 //-----------------------------------------------------------------------------
@@ -404,6 +404,11 @@ typedef struct
 #define 	IRQ_NUM_SPI3				51
 #define 	IRQ_NUM_SPI4				84
 
+/*
+ * IRQ I2C
+ */
+#define 	IRQ_NUM_I2C1_EV			31		// I2C event interrupt
+#define 	IRQ_NUM_I2C1_ER			32		// I2C error interrupt
 
 /*
  *  NVIC Priority
@@ -494,9 +499,9 @@ typedef struct
 
 // Bit pos def I2C_CR2
 #define I2C_CR2_FREQ					0
-#define I2C_CR2_ITERREN					8
-#define I2C_CR2_ITEVTEN					9
-#define I2C_CR2_ITBUFEN					10
+#define I2C_CR2_ITERREN					8		// Error interrupt enable
+#define I2C_CR2_ITEVTEN					9		// Event interrupt enable
+#define I2C_CR2_ITBUFEN					10		// Buffer interrupt enable
 
 // Bit pos def I2C_SR1
 #define I2C_SR1_SB							0
@@ -510,7 +515,7 @@ typedef struct
 #define I2C_SR1_ARLO						9	// Arbitration lost (master mode)
 #define I2C_SR1_AF							10	// Acknowledge failure
 #define I2C_SR1_OVR							11	// Overrun/Underrun
-#define I2C_SR1_TIMEOUT						14	//  Timeout or Tlow error
+#define I2C_SR1_TIMEOUT					14	//  Timeout or Tlow error
 
 // Bit pos def I2C_SR2
 #define I2C_SR2_MSL						0 	//  Master/slave

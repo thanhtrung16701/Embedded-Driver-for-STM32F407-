@@ -2,7 +2,7 @@
 ../drivers/Src/stm32f407_spi_driver.c:52:6:SPI_Init	4
 ../drivers/Src/stm32f407_spi_driver.c:98:6:SPI_DeInit	5
 ../drivers/Src/stm32f407_spi_driver.c:120:9:SPI_GetFlagStatus	2
-../drivers/Src/stm32f407_spi_driver.c:142:6:SPI_SendData	4
+../drivers/Src/stm32f407_spi_driver.c:142:6:SPI_SendData	5
 ../drivers/Src/stm32f407_spi_driver.c:170:6:SPI_ReceiveData	4
 ../drivers/Src/stm32f407_spi_driver.c:199:6:SPI_IRQInterruptConfig	12
 ../drivers/Src/stm32f407_spi_driver.c:225:6:SPI_IRQPriorityConfig	1

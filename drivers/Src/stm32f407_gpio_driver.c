@@ -70,6 +70,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 {
 	// Enable the peripheral clock
 	GPIO_PeriClockCtrl(pGPIOHandle->pGPIOx, ENABLE);
+
 	uint32_t temp = 0;
 	/*
 	 * cfg the mode of gpio pin
@@ -112,6 +113,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 
 		//  before config SYSCFG, enable SYSCFG clock
 		SYSCFG_PCLK_EN();
+
 		SYSCFG->EXTICR[temp1] = portcode << (4 * temp2);
 
 		//3. Enable the EXTI delivery using interrupt mask reg (IMR)
@@ -152,7 +154,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 	if (pGPIOHandle->GPIO_PinCfg.GPIO_PinMode == GPIO_MODE_ALFN) {
 		uint8_t temp1, temp2;
 
-		temp1=pGPIOHandle->GPIO_PinCfg.GPIO_PinNumber/8;		//integer
+		temp1 = pGPIOHandle->GPIO_PinCfg.GPIO_PinNumber / 8;		//integer
 		temp2 = pGPIOHandle->GPIO_PinCfg.GPIO_PinNumber % 8;	//remainder or balance
 		// clear bit
 		pGPIOHandle->pGPIOx->AFR[temp1]	&= ~(0xF << (4 * temp2));
