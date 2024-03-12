@@ -10,7 +10,6 @@
 #ifndef INC_STM32F4XX_H_
 #define INC_STM32F4XX_H_
 
-
 #include <stddef.h>
 #include <stdint.h>
 
@@ -50,7 +49,6 @@
 #define SRAM 				SRAM1_BASE_ADDR
 #define SRAM2_BASE_ADDR 	0x2001C000U
 #define ROM_BASE_ADDR 		0x1FFF0000U
-
 
 //Buoc 2: Dia chi bus chung
 
@@ -127,7 +125,6 @@
 #define UART5     ((USART_RegDef_t*)UART5_BASE_ADDR)
 #define USART6    ((USART_RegDef_t*)USART6_BASE_ADDR)
 
-
 #define RCC 		((RCC_RegDef_t*)RCC_BASE_ADDR)
 
 #define EXTI		((EXTI_RegDef_t*)EXTI_BASE_ADDR)
@@ -137,151 +134,141 @@
 /*
  * ********************* Peripheral Register Definition**************
  * */
-typedef struct{
-	__vo uint32_t MODER;		//  GPIO port mode    				offset: 0x00
-	__vo uint32_t OTYPER;		//  output type 							offset: 0x04
-	__vo uint32_t OSPEEDR;		//  output speed  							offset: 0x08
-	__vo uint32_t PUPDR;		//  pull-up/pull-down  						offset: 0x0C
-	__vo uint32_t IDR;			//  input data 		 						offset: 0x10
-	__vo uint32_t ODR;			//  output data 		 					offset: 0x14
-	__vo uint32_t BSRR;			//  bit set/reset 		 					offset: 0x18
-	__vo uint32_t LCKR;			//  configuration lock 						offset: 0x1C
-	__vo uint32_t AFR[2];		//  alternate function  			offset: 0x20
+typedef struct {
+__vo uint32_t MODER;		//  GPIO port mode    				offset: 0x00
+__vo uint32_t OTYPER;		//  output type 							offset: 0x04
+__vo uint32_t OSPEEDR;		//  output speed  							offset: 0x08
+__vo uint32_t PUPDR;		//  pull-up/pull-down  						offset: 0x0C
+__vo uint32_t IDR;			//  input data 		 						offset: 0x10
+__vo uint32_t ODR;			//  output data 		 					offset: 0x14
+__vo uint32_t BSRR;			//  bit set/reset 		 					offset: 0x18
+__vo uint32_t LCKR;			//  configuration lock 						offset: 0x1C
+__vo uint32_t AFR[2];		//  alternate function  			offset: 0x20
 
-}GPIO_RegDef_t;
+} GPIO_RegDef_t;
 
 /*
  ****************************RCC Register Definition *****************
  **/
 
-typedef struct
-{
-	__vo uint32_t CR; 			//clock control 							offset: 0x00
-	__vo uint32_t PLLCFGR; 		//configuration 							offset: 0x04
-	__vo uint32_t CFGR; 		//clock configuration 						offset: 0x08
-	__vo uint32_t CIR; 			//clock interrupt 							offset: 0x0C
-	__vo uint32_t AHB1RSTR; 		//AHB1 peripheral reset 				offset: 0x10
-	__vo uint32_t AHB2RSTR; 		//AHB2 peripheral reset 				offset: 0x14
-	__vo uint32_t AHB3RSTR; 		//AHB3 peripheral reset  				offset: 0x18
+typedef struct {
+__vo uint32_t CR; 			//clock control 							offset: 0x00
+__vo uint32_t PLLCFGR; 		//configuration 							offset: 0x04
+__vo uint32_t CFGR; 		//clock configuration 						offset: 0x08
+__vo uint32_t CIR; 			//clock interrupt 							offset: 0x0C
+__vo uint32_t AHB1RSTR; 		//AHB1 peripheral reset 				offset: 0x10
+__vo uint32_t AHB2RSTR; 		//AHB2 peripheral reset 				offset: 0x14
+__vo uint32_t AHB3RSTR; 		//AHB3 peripheral reset  				offset: 0x18
 
-	uint32_t RESERVED0; 		//Reserved				 					offset: 0x1C
+uint32_t RESERVED0; 		//Reserved				 					offset: 0x1C
 
+__vo uint32_t APB1RSTR; 		//APB1 peripheral reset 				offset: 0x20
+__vo uint32_t APB2RSTR; 		//APB2 peripheral reset 				offset: 0x24
 
-	__vo uint32_t APB1RSTR; 		//APB1 peripheral reset 				offset: 0x20
-	__vo uint32_t APB2RSTR; 		//APB2 peripheral reset 				offset: 0x24
+uint32_t RESERVED1[2]; 		//Reserved				 					offset: 0x28,0x2C
 
-	uint32_t RESERVED1[2]; 		//Reserved				 					offset: 0x28,0x2C
+__vo uint32_t AHB1ENR; 		// AHB1 peripheral clock enable				offset: 0x30
+__vo uint32_t AHB2ENR; 		// AHB2 peripheral clock enable				offset: 0x34
+__vo uint32_t AHB3ENR; 		// AHB3 peripheral clock enable				offset: 0x38
 
-	__vo uint32_t AHB1ENR; 		// AHB1 peripheral clock enable				offset: 0x30
-	__vo uint32_t AHB2ENR; 		// AHB2 peripheral clock enable				offset: 0x34
-	__vo uint32_t AHB3ENR; 		// AHB3 peripheral clock enable				offset: 0x38
+uint32_t RESERVED2; 		//											offset: 0x3C
 
-	uint32_t RESERVED2; 		//											offset: 0x3C
+__vo uint32_t APB1ENR; 		// APB1 peripheral clock enable 			offset: 0x40
+__vo uint32_t APB2ENR; 		// APB2 peripheral clock enable 			offset: 0x44
 
-	__vo uint32_t APB1ENR; 		// APB1 peripheral clock enable 			offset: 0x40
-	__vo uint32_t APB2ENR; 		// APB2 peripheral clock enable 			offset: 0x44
+uint32_t RESERVED3[2]; 		// 										offset: 0x48, 0x4C
 
-	 uint32_t RESERVED3[2]; 		// 										offset: 0x48, 0x4C
+__vo uint32_t AHB1LPENR; 		//AHB1 -- in low power mode				offset: 0x50
+__vo uint32_t AHB2LPENR; 		//AHB2 -- in low power mode				offset: 0x54
+__vo uint32_t AHB3LPENR; 		//AHB3 -- in low power mode				offset: 0x58
 
-	__vo uint32_t AHB1LPENR; 		//AHB1 -- in low power mode				offset: 0x50
-	__vo uint32_t AHB2LPENR; 		//AHB2 -- in low power mode				offset: 0x54
-	__vo uint32_t AHB3LPENR; 		//AHB3 -- in low power mode				offset: 0x58
+uint32_t RESERVED4; 		//											offset: 0x5C
 
-	uint32_t RESERVED4; 		//											offset: 0x5C
+__vo uint32_t APB1LPENR; 		//APB1 -- in low power mode	 			offset: 0x60
+__vo uint32_t APB2LPENR; 		//APB2 -- in low power mode	 			offset: 0x64
 
-	__vo uint32_t APB1LPENR; 		//APB1 -- in low power mode	 			offset: 0x60
-	__vo uint32_t APB2LPENR; 		//APB2 -- in low power mode	 			offset: 0x64
+uint32_t RESERVED5[2]; 		//											offset: 0x68, 0x6C
 
-	uint32_t RESERVED5[2]; 		//											offset: 0x68, 0x6C
+__vo uint32_t BDCR; 			//Backup domain control 				offset: 0x70
+__vo uint32_t CSR; 				// clock control & status				offset: 0x74
 
-	__vo uint32_t BDCR; 			//Backup domain control 				offset: 0x70
-	__vo uint32_t CSR; 				// clock control & status				offset: 0x74
+uint32_t RESERVED6[2]; 				// 									offset: 0x78, 0x7C
 
-	uint32_t RESERVED6[2]; 				// 									offset: 0x78, 0x7C
+__vo uint32_t SSCGR; 			// spread spectrum clock generation		offset: 0x80
+__vo uint32_t PLLI2SCFGR; 		//PLLI2S configuration					offset: 0x84
 
-	__vo uint32_t SSCGR; 			// spread spectrum clock generation		offset: 0x80
-	__vo uint32_t PLLI2SCFGR; 		//PLLI2S configuration					offset: 0x84
-
-}RCC_RegDef_t;
+} RCC_RegDef_t;
 
 /*
  * ********************EXTI Register Structure Definition *************
  */
 
-typedef struct
-{
-	__vo	uint32_t IMR;	//		Interrupt mask				offset: 0x00
-	__vo	uint32_t EMR;	//		Event mask					offset: 0x04
-	__vo	uint32_t RTSR;	//		Rising trigger selection	offset: 0x08
-	__vo	uint32_t FTSR;	//		Falling trigger selection	offset: 0x0C
-	__vo	uint32_t SWIER;	//		Software interrupt event 	offset: 0x10
-	__vo	uint32_t PR;	//		Pending					 	offset: 0x14
+typedef struct {
+__vo uint32_t IMR;	//		Interrupt mask				offset: 0x00
+__vo uint32_t EMR;	//		Event mask					offset: 0x04
+__vo uint32_t RTSR;	//		Rising trigger selection	offset: 0x08
+__vo uint32_t FTSR;	//		Falling trigger selection	offset: 0x0C
+__vo uint32_t SWIER;	//		Software interrupt event 	offset: 0x10
+__vo uint32_t PR;	//		Pending					 	offset: 0x14
 
-}EXTI_RegDef_t;
+} EXTI_RegDef_t;
 
 /*
  * ********************** SYSCFG Register Structure Definition ********************
  */
 
-typedef struct
-{
-	__vo uint32_t MEMRMP;	// memory remap										offset: 0x00
-	__vo uint32_t PMC;		// peripheral mode configuration					offset: 0x04
-	__vo uint32_t EXTICR[4];// external interrupt configuration register 	offset: 0x08,0x0C,0x10,0x14
+typedef struct {
+__vo uint32_t MEMRMP;	// memory remap										offset: 0x00
+__vo uint32_t PMC;		// peripheral mode configuration					offset: 0x04
+__vo uint32_t EXTICR[4];		// external interrupt configuration register 	offset: 0x08,0x0C,0x10,0x14
 
-	__vo uint32_t CMPCR;	// Compensation cell control						offset: 0x20
-}SYSCFG_RegDef_t;
+__vo uint32_t CMPCR;	// Compensation cell control						offset: 0x20
+} SYSCFG_RegDef_t;
 
+typedef struct {
+__vo uint32_t CR1; 		// SPI control					offset: 0x00
+__vo uint32_t CR2; 		// SPI control 2				offset: 0x04
+__vo uint32_t SR; 		// SPI status					offset: 0x08
+__vo uint32_t DR; 		// SPI data						offset: 0x0C
+__vo uint32_t CRCPR; 	// CRC polynomial 				offset: 0x10
+__vo uint32_t RXCRCR; 	// RX CRC  						offset: 0x14
+__vo uint32_t TXCRCR; 	// TX CRC  						offset: 0x18
+__vo uint32_t I2SCFGR; 	// SPI_I2S configuration  		offset: 0x1C
+__vo uint32_t I2SPR; 	// SPI_I2S prescaler   			offset: 0x20
 
-typedef struct
-{
-	__vo uint32_t CR1; 		// SPI control					offset: 0x00
-	__vo uint32_t CR2; 		// SPI control 2				offset: 0x04
-	__vo uint32_t SR; 		// SPI status					offset: 0x08
-	__vo uint32_t DR; 		// SPI data						offset: 0x0C
-	__vo uint32_t CRCPR; 	// CRC polynomial 				offset: 0x10
-	__vo uint32_t RXCRCR; 	// RX CRC  						offset: 0x14
-	__vo uint32_t TXCRCR; 	// TX CRC  						offset: 0x18
-	__vo uint32_t I2SCFGR; 	// SPI_I2S configuration  		offset: 0x1C
-	__vo uint32_t I2SPR; 	// SPI_I2S prescaler   			offset: 0x20
-
-}SPI_RegDef_t;
-
-
+} SPI_RegDef_t;
 
 /*
  * ********************** I2C Register Structure Definition ********************
  */
 
-typedef struct
-{
-	__vo uint32_t CR1;			// Control register 1  			offset: 0x00
-	__vo uint32_t CR2;			// Control register 2  			offset: 0x04
-	__vo uint32_t OAR1;			// Own address register 1 		 offset: 0x08
-	__vo uint32_t OAR2;			// Own address register 2 		 offset: 0x0C
-	__vo uint32_t DR;			// Data register 				 offset: 0x10
-	__vo uint32_t SR1;			// Status register 1 			 offset: 0x14
-	__vo uint32_t SR2;			// Status register 2 			 offset: 0x18
-	__vo uint32_t CCR;			// Clock control register		offset: 0x1C
-	__vo uint32_t TRISE;		// TRISE register				offset: 0x20
+typedef struct {
+__vo uint32_t CR1;			// Control register 1  			offset: 0x00
+__vo uint32_t CR2;			// Control register 2  			offset: 0x04
+__vo uint32_t OAR1;			// Own address register 1 		 offset: 0x08
+__vo uint32_t OAR2;			// Own address register 2 		 offset: 0x0C
+__vo uint32_t DR;			// Data register 				 offset: 0x10
+__vo uint32_t SR1;			// Status register 1 			 offset: 0x14
+__vo uint32_t SR2;			// Status register 2 			 offset: 0x18
+__vo uint32_t CCR;			// Clock control register		offset: 0x1C
+__vo uint32_t TRISE;		// TRISE register				offset: 0x20
 
-}I2C_RegDef_t;
+} I2C_RegDef_t;
 
-typedef struct
-{
-   __vo uint32_t SR;        // Status register
-   __vo uint32_t DR;           // Data register           offset: 0x04
-   __vo uint32_t BRR;           // Baud rate          offset: 0x08
-   __vo uint32_t CR1;           // Control register 1          offset: 0x0C
-   __vo uint32_t CR2;           // Control register 2          offset: 0x10
-   __vo uint32_t CR3;           // Control register 3          offset: 0x14
-   __vo uint32_t GTPR;           // Guard time and prescaler          offset: 0x18
-}USART_RegDef_t;
+typedef struct {
+__vo uint32_t SR;        // Status register
+__vo uint32_t DR;           // Data register           offset: 0x04
+__vo uint32_t BRR;           // Baud rate          offset: 0x08
+__vo uint32_t CR1;           // Control register 1          offset: 0x0C
+__vo uint32_t CR2;           // Control register 2          offset: 0x10
+__vo uint32_t CR3;           // Control register 3          offset: 0x14
+__vo uint32_t GTPR;           // Guard time and prescaler          offset: 0x18
+
+} USART_RegDef_t;
 
 //-----------------------------------------------------------------------------
 /********Clock Enable Macro for GPIOx - PAGE 145 ***************/
 // GPIO -> AHB1 -> AHB1ENR
-
 #define GPIOA_PCLK_EN() 			(RCC->AHB1ENR |= (1 << 0))
 #define GPIOB_PCLK_EN() 			(RCC->AHB1ENR |= (1 << 1))
 #define GPIOC_PCLK_EN() 			(RCC->AHB1ENR |= (1 << 2))
@@ -382,7 +369,6 @@ typedef struct
 #define SPI3_REG_RESET()		do{RCC->APB1RSTR |= (1 << 14); RCC->APB1RSTR &= ~(1 << 14);}while(0);
 #define SPI4_REG_RESET()		do{RCC->APB2RSTR |= (1 << 7); RCC->APB2RSTR &= ~(1 << 7);}while(0);
 
-
 /*
  * Reset I2C peripheral - while(0) execute only one time
  */
@@ -449,7 +435,6 @@ typedef struct
 #define 	NVIC_IRQ_PRI13			13
 #define 	NVIC_IRQ_PRI14			14
 #define 	NVIC_IRQ_PRI15			15
-
 
 //------------------------------ Generic macros ---------------------------------------
 
@@ -547,6 +532,71 @@ typedef struct
 #define I2C_CCR_CCR 					0 // Clock control register in Fm/Sm mode`
 #define I2C_CCR_DUTY 					14 //  Fm mode duty cycle
 #define I2C_CCR_FS 					15 //  I2C master mode selection 0: Sm -- 1: Fm
+
+/*
+ *  Bit pos definitions of USART peripheral
+ * ************************************************************
+ */
+
+#define USART_CR1_SBK           0
+#define USART_CR1_RWU           1
+#define USART_CR1_RE            2       //  Receiver enable
+#define USART_CR1_TE            3       // Transmitter enable
+#define USART_CR1_IDLEIE        4
+#define USART_CR1_RXNEIE         5
+#define USART_CR1_TCIE          6
+#define USART_CR1_TXEIE         7
+#define USART_CR1_PEIE          8
+#define USART_CR1_PS             9    // Parity selection: 0: Even parity, 1: Odd parity
+#define USART_CR1_PCE           10    // Parity control enable
+#define USART_CR1_WAKE          11
+#define USART_CR1_M             12    // Word length: 0: 1 Start bit, 8 Data bits
+                                       //              1: 1 Start bit, 9 Data bits,
+#define USART_CR1_UE            13      // USART enable
+#define USART_CR1_OVER8         15
+
+/*
+ * Bit position definitions USART_CR2
+ */
+#define USART_CR2_ADD           0
+#define USART_CR2_LBDL          5
+#define USART_CR2_LBDIE         6
+#define USART_CR2_LBCL          8
+#define USART_CR2_CPHA          9
+#define USART_CR2_CPOL          10
+#define USART_CR2_STOP          12    // STOP bits
+#define USART_CR2_LINEN           14
+
+/*
+ * Bit position definitions USART_CR3
+ */
+#define USART_CR3_EIE           0
+#define USART_CR3_IREN          1
+#define USART_CR3_IRLP          2
+#define USART_CR3_HDSEL          3
+#define USART_CR3_NACK          4
+#define USART_CR3_SCEN          5
+#define USART_CR3_DMAR          6
+#define USART_CR3_DMAT          7
+#define USART_CR3_RTSE          8
+#define USART_CR3_CTSE          9     // CTS enable, data is only transmitted when the CTS input is asserted
+#define USART_CR3_CTSIE           10
+#define USART_CR3_ONEBIT          11
+
+/*
+ * Bit position definitions USART_SR
+ */
+
+#define USART_SR_PE               0
+#define USART_SR_FE               1
+#define USART_SR_NE               2
+#define USART_SR_ORE              3
+#define USART_SR_IDLE             4
+#define USART_SR_RXNE             5
+#define USART_SR_TC               6
+#define USART_SR_TXE              7
+#define USART_SR_LBD              8
+#define USART_SR_CTS              9
 
 #include "stm32f407_gpio_driver.h"
 #include "stm32f407_spi_driver.h"

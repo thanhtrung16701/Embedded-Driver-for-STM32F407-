@@ -1,2 +1,7 @@
 ../drivers/Src/stm32f407_uart_driver.c:10:6:USART_PeripheralControl	16	static
 ../drivers/Src/stm32f407_uart_driver.c:22:6:USART_PeriClockControl	16	static
+../drivers/Src/stm32f407_uart_driver.c:78:6:USART_Init	24	static
+../drivers/Src/stm32f407_uart_driver.c:177:6:USART_IRQInterruptConfig	16	static
+../drivers/Src/stm32f407_uart_driver.c:211:6:USART_IRQPriorityConfig	24	static
+../drivers/Src/stm32f407_uart_driver.c:224:9:USART_GetFlagStatus	16	static
+../drivers/Src/stm32f407_uart_driver.c:233:6:USART_PeriControl	16	static

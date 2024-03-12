@@ -30,7 +30,7 @@ typedef struct
  */
 typedef struct
 {
-  USART_RegDef_t *pUSARTx;
+  USART_RegDef_t  *pUSARTx;
   USART_Config_t   USART_Config;
 }USART_Handle_t;
 
