@@ -1,0 +1,2 @@
+../drivers/Src/stm32f407_uart_driver.c:10:6:USART_PeripheralControl	16	static
+../drivers/Src/stm32f407_uart_driver.c:22:6:USART_PeriClockControl	16	static

@@ -125,6 +125,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/012_I2C_Master_RX_Test_IT.o
  .group         0x0000000000000000        0xc ./Src/012_I2C_Master_RX_Test_IT.o
  .group         0x0000000000000000        0xc ./Src/012_I2C_Master_RX_Test_IT.o
+ .group         0x0000000000000000        0xc ./Src/012_I2C_Master_RX_Test_IT.o
  .text          0x0000000000000000        0x0 ./Src/012_I2C_Master_RX_Test_IT.o
  .data          0x0000000000000000        0x0 ./Src/012_I2C_Master_RX_Test_IT.o
  .bss           0x0000000000000000        0x0 ./Src/012_I2C_Master_RX_Test_IT.o
@@ -286,6 +287,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_gpio_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_gpio_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_gpio_driver.o
  .text          0x0000000000000000        0x0 ./drivers/Src/stm32f407_gpio_driver.o
  .data          0x0000000000000000        0x0 ./drivers/Src/stm32f407_gpio_driver.o
  .bss           0x0000000000000000        0x0 ./drivers/Src/stm32f407_gpio_driver.o
@@ -311,9 +313,11 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x103 ./drivers/Src/stm32f407_gpio_driver.o
  .debug_macro   0x0000000000000000       0x6a ./drivers/Src/stm32f407_gpio_driver.o
  .debug_macro   0x0000000000000000      0x1df ./drivers/Src/stm32f407_gpio_driver.o
- .debug_macro   0x0000000000000000      0x5f0 ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_macro   0x0000000000000000      0x618 ./drivers/Src/stm32f407_gpio_driver.o
  .debug_macro   0x0000000000000000       0xd6 ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_macro   0x0000000000000000       0xac ./drivers/Src/stm32f407_gpio_driver.o
  .debug_macro   0x0000000000000000       0xc4 ./drivers/Src/stm32f407_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_i2c_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_i2c_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_i2c_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_i2c_driver.o
@@ -367,9 +371,11 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x103 ./drivers/Src/stm32f407_i2c_driver.o
  .debug_macro   0x0000000000000000       0x6a ./drivers/Src/stm32f407_i2c_driver.o
  .debug_macro   0x0000000000000000      0x1df ./drivers/Src/stm32f407_i2c_driver.o
- .debug_macro   0x0000000000000000      0x5f0 ./drivers/Src/stm32f407_i2c_driver.o
+ .debug_macro   0x0000000000000000      0x618 ./drivers/Src/stm32f407_i2c_driver.o
  .debug_macro   0x0000000000000000       0xc4 ./drivers/Src/stm32f407_i2c_driver.o
  .debug_macro   0x0000000000000000       0xc4 ./drivers/Src/stm32f407_i2c_driver.o
+ .debug_macro   0x0000000000000000       0xac ./drivers/Src/stm32f407_i2c_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_spi_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_spi_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_spi_driver.o
  .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_spi_driver.o
@@ -433,7 +439,7 @@ Discarded input sections
                 0x0000000000000000       0xc0 ./drivers/Src/stm32f407_spi_driver.o
  .debug_rnglists
                 0x0000000000000000       0x92 ./drivers/Src/stm32f407_spi_driver.o
- .debug_macro   0x0000000000000000       0xad ./drivers/Src/stm32f407_spi_driver.o
+ .debug_macro   0x0000000000000000       0xc1 ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000      0xaa8 ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000      0x174 ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000       0x22 ./drivers/Src/stm32f407_spi_driver.o
@@ -442,16 +448,63 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x103 ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000       0x6a ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000      0x1df ./drivers/Src/stm32f407_spi_driver.o
- .debug_macro   0x0000000000000000      0x5f0 ./drivers/Src/stm32f407_spi_driver.o
+ .debug_macro   0x0000000000000000      0x618 ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000       0xc4 ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000       0xd6 ./drivers/Src/stm32f407_spi_driver.o
+ .debug_macro   0x0000000000000000       0xac ./drivers/Src/stm32f407_spi_driver.o
  .debug_macro   0x0000000000000000       0xbe ./drivers/Src/stm32f407_spi_driver.o
- .debug_line    0x0000000000000000      0xa5e ./drivers/Src/stm32f407_spi_driver.o
- .debug_str     0x0000000000000000     0x694c ./drivers/Src/stm32f407_spi_driver.o
+ .debug_line    0x0000000000000000      0xa79 ./drivers/Src/stm32f407_spi_driver.o
+ .debug_str     0x0000000000000000     0x6d10 ./drivers/Src/stm32f407_spi_driver.o
  .comment       0x0000000000000000       0x44 ./drivers/Src/stm32f407_spi_driver.o
  .debug_frame   0x0000000000000000      0x33c ./drivers/Src/stm32f407_spi_driver.o
  .ARM.attributes
                 0x0000000000000000       0x2e ./drivers/Src/stm32f407_spi_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407_uart_driver.o
+ .text          0x0000000000000000        0x0 ./drivers/Src/stm32f407_uart_driver.o
+ .data          0x0000000000000000        0x0 ./drivers/Src/stm32f407_uart_driver.o
+ .bss           0x0000000000000000        0x0 ./drivers/Src/stm32f407_uart_driver.o
+ .text.USART_PeripheralControl
+                0x0000000000000000       0x36 ./drivers/Src/stm32f407_uart_driver.o
+ .text.USART_PeriClockControl
+                0x0000000000000000       0xdc ./drivers/Src/stm32f407_uart_driver.o
+ .debug_info    0x0000000000000000      0x30b ./drivers/Src/stm32f407_uart_driver.o
+ .debug_abbrev  0x0000000000000000      0x119 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_rnglists
+                0x0000000000000000       0x1a ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0xb7 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000      0xaa8 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000      0x174 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0x22 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0x8e ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0x51 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000      0x103 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0x6a ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000      0x1df ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000      0x618 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0xc4 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0xc4 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0xd6 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_macro   0x0000000000000000       0xac ./drivers/Src/stm32f407_uart_driver.o
+ .debug_line    0x0000000000000000      0x537 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_str     0x0000000000000000     0x6a9e ./drivers/Src/stm32f407_uart_driver.o
+ .comment       0x0000000000000000       0x44 ./drivers/Src/stm32f407_uart_driver.o
+ .debug_frame   0x0000000000000000       0x60 ./drivers/Src/stm32f407_uart_driver.o
+ .ARM.attributes
+                0x0000000000000000       0x2e ./drivers/Src/stm32f407_uart_driver.o
  .text          0x0000000000000000        0x0 D:/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-exit.o)
  .data          0x0000000000000000        0x0 D:/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-exit.o)
  .bss           0x0000000000000000        0x0 D:/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-exit.o)
@@ -664,6 +717,7 @@ LOAD ./Startup/startup_stm32f407vgtx.o
 LOAD ./drivers/Src/stm32f407_gpio_driver.o
 LOAD ./drivers/Src/stm32f407_i2c_driver.o
 LOAD ./drivers/Src/stm32f407_spi_driver.o
+LOAD ./drivers/Src/stm32f407_uart_driver.o
 START GROUP
 LOAD D:/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a
 LOAD D:/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a
@@ -1251,21 +1305,21 @@ LOAD D:/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.
  .comment       0x0000000000000043       0x44 ./drivers/Src/stm32f407_gpio_driver.o
  .comment       0x0000000000000043       0x44 ./drivers/Src/stm32f407_i2c_driver.o
 
-.debug_info     0x0000000000000000     0x1fd2
- .debug_info    0x0000000000000000      0x602 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_info    0x0000000000000602      0x6d1 ./Src/syscalls.o
- .debug_info    0x0000000000000cd3      0x168 ./Src/sysmem.o
- .debug_info    0x0000000000000e3b       0x23 ./Startup/startup_stm32f407vgtx.o
- .debug_info    0x0000000000000e5e      0x708 ./drivers/Src/stm32f407_gpio_driver.o
- .debug_info    0x0000000000001566      0xa6c ./drivers/Src/stm32f407_i2c_driver.o
+.debug_info     0x0000000000000000     0x1fc2
+ .debug_info    0x0000000000000000      0x5fa ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_info    0x00000000000005fa      0x6d1 ./Src/syscalls.o
+ .debug_info    0x0000000000000ccb      0x168 ./Src/sysmem.o
+ .debug_info    0x0000000000000e33       0x23 ./Startup/startup_stm32f407vgtx.o
+ .debug_info    0x0000000000000e56      0x708 ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_info    0x000000000000155e      0xa64 ./drivers/Src/stm32f407_i2c_driver.o
 
-.debug_abbrev   0x0000000000000000      0x85f
- .debug_abbrev  0x0000000000000000      0x1b1 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_abbrev  0x00000000000001b1      0x1b1 ./Src/syscalls.o
- .debug_abbrev  0x0000000000000362       0xbc ./Src/sysmem.o
- .debug_abbrev  0x000000000000041e       0x12 ./Startup/startup_stm32f407vgtx.o
- .debug_abbrev  0x0000000000000430      0x17b ./drivers/Src/stm32f407_gpio_driver.o
- .debug_abbrev  0x00000000000005ab      0x2b4 ./drivers/Src/stm32f407_i2c_driver.o
+.debug_abbrev   0x0000000000000000      0x8a7
+ .debug_abbrev  0x0000000000000000      0x1d5 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_abbrev  0x00000000000001d5      0x1b1 ./Src/syscalls.o
+ .debug_abbrev  0x0000000000000386       0xbc ./Src/sysmem.o
+ .debug_abbrev  0x0000000000000442       0x12 ./Startup/startup_stm32f407vgtx.o
+ .debug_abbrev  0x0000000000000454      0x17b ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_abbrev  0x00000000000005cf      0x2d8 ./drivers/Src/stm32f407_i2c_driver.o
 
 .debug_aranges  0x0000000000000000      0x2a0
  .debug_aranges
@@ -1296,98 +1350,99 @@ LOAD D:/STM32/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.
  .debug_rnglists
                 0x000000000000013c       0xaf ./drivers/Src/stm32f407_i2c_driver.o
 
-.debug_macro    0x0000000000000000     0x3805
- .debug_macro   0x0000000000000000      0x1b1 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x00000000000001b1      0xaa8 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000c59       0x22 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000c7b       0x5b ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000cd6       0x24 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000cfa       0x94 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000d8e       0x43 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000dd1       0x34 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000e05       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000e1b       0x57 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000e72       0x97 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000000f09      0x369 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001272       0xfd ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x000000000000136f       0x10 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x000000000000137f       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001395       0x43 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x00000000000013d8       0x34 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x000000000000140c       0x10 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x000000000000141c       0x58 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001474       0x8e ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001502       0x1c ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x000000000000151e      0x177 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001695       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x00000000000016ab       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x00000000000016c1      0x147 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001808       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x000000000000181e       0x35 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001853       0x20 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001873      0x103 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001976       0x6a ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x00000000000019e0      0x1df ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000001bbf      0x5f0 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x00000000000021af       0xc4 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000002273       0xc4 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x0000000000002337       0xd6 ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_macro   0x000000000000240d      0x286 ./Src/syscalls.o
- .debug_macro   0x0000000000002693      0x174 ./Src/syscalls.o
- .debug_macro   0x0000000000002807       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002817       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002827       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002837       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002847       0x1c ./Src/syscalls.o
- .debug_macro   0x0000000000002863       0x52 ./Src/syscalls.o
- .debug_macro   0x00000000000028b5       0x22 ./Src/syscalls.o
- .debug_macro   0x00000000000028d7       0x10 ./Src/syscalls.o
- .debug_macro   0x00000000000028e7       0x52 ./Src/syscalls.o
- .debug_macro   0x0000000000002939       0xcf ./Src/syscalls.o
- .debug_macro   0x0000000000002a08       0x1c ./Src/syscalls.o
- .debug_macro   0x0000000000002a24       0x3d ./Src/syscalls.o
- .debug_macro   0x0000000000002a61       0x35 ./Src/syscalls.o
- .debug_macro   0x0000000000002a96      0x12c ./Src/syscalls.o
- .debug_macro   0x0000000000002bc2       0x16 ./Src/syscalls.o
- .debug_macro   0x0000000000002bd8       0x16 ./Src/syscalls.o
- .debug_macro   0x0000000000002bee       0x29 ./Src/syscalls.o
- .debug_macro   0x0000000000002c17       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002c27      0x242 ./Src/syscalls.o
- .debug_macro   0x0000000000002e69       0x1c ./Src/syscalls.o
- .debug_macro   0x0000000000002e85       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002e95      0x18a ./Src/syscalls.o
- .debug_macro   0x000000000000301f       0x16 ./Src/syscalls.o
- .debug_macro   0x0000000000003035       0xce ./Src/syscalls.o
- .debug_macro   0x0000000000003103       0xff ./Src/sysmem.o
- .debug_macro   0x0000000000003202      0x23c ./Src/sysmem.o
- .debug_macro   0x000000000000343e       0xad ./drivers/Src/stm32f407_gpio_driver.o
- .debug_macro   0x00000000000034eb       0x8e ./drivers/Src/stm32f407_gpio_driver.o
- .debug_macro   0x0000000000003579       0x51 ./drivers/Src/stm32f407_gpio_driver.o
- .debug_macro   0x00000000000035ca       0xbe ./drivers/Src/stm32f407_gpio_driver.o
- .debug_macro   0x0000000000003688       0xad ./drivers/Src/stm32f407_i2c_driver.o
- .debug_macro   0x0000000000003735       0xd0 ./drivers/Src/stm32f407_i2c_driver.o
+.debug_macro    0x0000000000000000     0x3915
+ .debug_macro   0x0000000000000000      0x1c5 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000001c5      0xaa8 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000c6d       0x22 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000c8f       0x5b ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000cea       0x24 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000d0e       0x94 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000da2       0x43 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000de5       0x34 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000e19       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000e2f       0x57 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000e86       0x97 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000000f1d      0x369 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001286       0xfd ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001383       0x10 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001393       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000013a9       0x43 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000013ec       0x34 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001420       0x10 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001430       0x58 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001488       0x8e ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001516       0x1c ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001532      0x177 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000016a9       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000016bf       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000016d5      0x147 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x000000000000181c       0x16 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001832       0x35 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001867       0x20 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001887      0x103 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x000000000000198a       0x6a ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000019f4      0x1df ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000001bd3      0x618 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000021eb       0xc4 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000022af       0xc4 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000002373       0xd6 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x0000000000002449       0xac ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_macro   0x00000000000024f5      0x286 ./Src/syscalls.o
+ .debug_macro   0x000000000000277b      0x174 ./Src/syscalls.o
+ .debug_macro   0x00000000000028ef       0x10 ./Src/syscalls.o
+ .debug_macro   0x00000000000028ff       0x10 ./Src/syscalls.o
+ .debug_macro   0x000000000000290f       0x10 ./Src/syscalls.o
+ .debug_macro   0x000000000000291f       0x10 ./Src/syscalls.o
+ .debug_macro   0x000000000000292f       0x1c ./Src/syscalls.o
+ .debug_macro   0x000000000000294b       0x52 ./Src/syscalls.o
+ .debug_macro   0x000000000000299d       0x22 ./Src/syscalls.o
+ .debug_macro   0x00000000000029bf       0x10 ./Src/syscalls.o
+ .debug_macro   0x00000000000029cf       0x52 ./Src/syscalls.o
+ .debug_macro   0x0000000000002a21       0xcf ./Src/syscalls.o
+ .debug_macro   0x0000000000002af0       0x1c ./Src/syscalls.o
+ .debug_macro   0x0000000000002b0c       0x3d ./Src/syscalls.o
+ .debug_macro   0x0000000000002b49       0x35 ./Src/syscalls.o
+ .debug_macro   0x0000000000002b7e      0x12c ./Src/syscalls.o
+ .debug_macro   0x0000000000002caa       0x16 ./Src/syscalls.o
+ .debug_macro   0x0000000000002cc0       0x16 ./Src/syscalls.o
+ .debug_macro   0x0000000000002cd6       0x29 ./Src/syscalls.o
+ .debug_macro   0x0000000000002cff       0x10 ./Src/syscalls.o
+ .debug_macro   0x0000000000002d0f      0x242 ./Src/syscalls.o
+ .debug_macro   0x0000000000002f51       0x1c ./Src/syscalls.o
+ .debug_macro   0x0000000000002f6d       0x10 ./Src/syscalls.o
+ .debug_macro   0x0000000000002f7d      0x18a ./Src/syscalls.o
+ .debug_macro   0x0000000000003107       0x16 ./Src/syscalls.o
+ .debug_macro   0x000000000000311d       0xce ./Src/syscalls.o
+ .debug_macro   0x00000000000031eb       0xff ./Src/sysmem.o
+ .debug_macro   0x00000000000032ea      0x23c ./Src/sysmem.o
+ .debug_macro   0x0000000000003526       0xc1 ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_macro   0x00000000000035e7       0x8e ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_macro   0x0000000000003675       0x51 ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_macro   0x00000000000036c6       0xbe ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_macro   0x0000000000003784       0xc1 ./drivers/Src/stm32f407_i2c_driver.o
+ .debug_macro   0x0000000000003845       0xd0 ./drivers/Src/stm32f407_i2c_driver.o
 
-.debug_line     0x0000000000000000     0x2dfe
- .debug_line    0x0000000000000000      0x7cd ./Src/012_I2C_Master_RX_Test_IT.o
- .debug_line    0x00000000000007cd      0x8e7 ./Src/syscalls.o
- .debug_line    0x00000000000010b4      0x583 ./Src/sysmem.o
- .debug_line    0x0000000000001637       0x7b ./Startup/startup_stm32f407vgtx.o
- .debug_line    0x00000000000016b2      0xa02 ./drivers/Src/stm32f407_gpio_driver.o
- .debug_line    0x00000000000020b4      0xd4a ./drivers/Src/stm32f407_i2c_driver.o
+.debug_line     0x0000000000000000     0x2e4f
+ .debug_line    0x0000000000000000      0x7e8 ./Src/012_I2C_Master_RX_Test_IT.o
+ .debug_line    0x00000000000007e8      0x8e7 ./Src/syscalls.o
+ .debug_line    0x00000000000010cf      0x583 ./Src/sysmem.o
+ .debug_line    0x0000000000001652       0x7b ./Startup/startup_stm32f407vgtx.o
+ .debug_line    0x00000000000016cd      0xa1d ./drivers/Src/stm32f407_gpio_driver.o
+ .debug_line    0x00000000000020ea      0xd65 ./drivers/Src/stm32f407_i2c_driver.o
 
-.debug_str      0x0000000000000000     0xc4f0
- .debug_str     0x0000000000000000     0x9e7c ./Src/012_I2C_Master_RX_Test_IT.o
-                                       0xa096 (size before relaxing)
- .debug_str     0x0000000000009e7c     0x2173 ./Src/syscalls.o
+.debug_str      0x0000000000000000     0xc8b4
+ .debug_str     0x0000000000000000     0xa240 ./Src/012_I2C_Master_RX_Test_IT.o
+                                       0xa45a (size before relaxing)
+ .debug_str     0x000000000000a240     0x2173 ./Src/syscalls.o
                                        0x98fa (size before relaxing)
- .debug_str     0x000000000000bfef       0x66 ./Src/sysmem.o
+ .debug_str     0x000000000000c3b3       0x66 ./Src/sysmem.o
                                        0x6003 (size before relaxing)
- .debug_str     0x000000000000c055       0x2f ./Startup/startup_stm32f407vgtx.o
+ .debug_str     0x000000000000c419       0x2f ./Startup/startup_stm32f407vgtx.o
                                          0x51 (size before relaxing)
- .debug_str     0x000000000000c084      0x281 ./drivers/Src/stm32f407_gpio_driver.o
-                                       0x68f6 (size before relaxing)
- .debug_str     0x000000000000c305      0x1eb ./drivers/Src/stm32f407_i2c_driver.o
-                                       0x6a4b (size before relaxing)
+ .debug_str     0x000000000000c448      0x281 ./drivers/Src/stm32f407_gpio_driver.o
+                                       0x6cba (size before relaxing)
+ .debug_str     0x000000000000c6c9      0x1eb ./drivers/Src/stm32f407_i2c_driver.o
+                                       0x6e0f (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x1188
  .debug_frame   0x0000000000000000      0x118 ./Src/012_I2C_Master_RX_Test_IT.o

@@ -9,8 +9,6 @@
 #define INC_STM32F407_I2C_DRIVER_H_
 #include <stm32f4xx.h>
 
-
-
 /*
  * Config struct I2Cx peripherals
  */

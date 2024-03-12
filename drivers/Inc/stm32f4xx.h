@@ -120,6 +120,14 @@
 #define I2C2		((I2C_RegDef_t*)I2C2_BASE_ADDR)
 #define I2C3		((I2C_RegDef_t*)I2C3_BASE_ADDR)
 
+#define USART1    ((USART_RegDef_t*)USART1_BASE_ADDR)
+#define USART2    ((USART_RegDef_t*)USART2_BASE_ADDR)
+#define USART3    ((USART_RegDef_t*)USART3_BASE_ADDR)
+#define UART4     ((USART_RegDef_t*)UART4_BASE_ADDR)
+#define UART5     ((USART_RegDef_t*)UART5_BASE_ADDR)
+#define USART6    ((USART_RegDef_t*)USART6_BASE_ADDR)
+
+
 #define RCC 		((RCC_RegDef_t*)RCC_BASE_ADDR)
 
 #define EXTI		((EXTI_RegDef_t*)EXTI_BASE_ADDR)
@@ -239,6 +247,8 @@ typedef struct
 
 }SPI_RegDef_t;
 
+
+
 /*
  * ********************** I2C Register Structure Definition ********************
  */
@@ -257,7 +267,16 @@ typedef struct
 
 }I2C_RegDef_t;
 
-
+typedef struct
+{
+   __vo uint32_t SR;        // Status register
+   __vo uint32_t DR;           // Data register           offset: 0x04
+   __vo uint32_t BRR;           // Baud rate          offset: 0x08
+   __vo uint32_t CR1;           // Control register 1          offset: 0x0C
+   __vo uint32_t CR2;           // Control register 2          offset: 0x10
+   __vo uint32_t CR3;           // Control register 3          offset: 0x14
+   __vo uint32_t GTPR;           // Guard time and prescaler          offset: 0x18
+}USART_RegDef_t;
 
 //-----------------------------------------------------------------------------
 /********Clock Enable Macro for GPIOx - PAGE 145 ***************/
@@ -529,7 +548,8 @@ typedef struct
 #define I2C_CCR_DUTY 					14 //  Fm mode duty cycle
 #define I2C_CCR_FS 					15 //  I2C master mode selection 0: Sm -- 1: Fm
 
-#include <stm32f407_gpio_driver.h>
-#include <stm32f407_spi_driver.h>
-#include <stm32f407_i2c_driver.h>
+#include "stm32f407_gpio_driver.h"
+#include "stm32f407_spi_driver.h"
+#include "stm32f407_i2c_driver.h"
+#include "stm32f407_uart_driver.h"
 #endif /* INC_STM32F4XX_H_ */
